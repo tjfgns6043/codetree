@@ -16,7 +16,9 @@ x, y = 0, 0
 cnt = 1
 arr[x][y] = 'A'
 alpha_num = 1
-while cnt < (n*m+1):
+while True:
+    if cnt == n*m:
+        break
     nx = x + dx[dir_num]
     ny = y + dy[dir_num]
 
