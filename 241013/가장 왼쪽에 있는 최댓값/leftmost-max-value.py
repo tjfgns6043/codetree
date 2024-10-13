@@ -8,11 +8,11 @@ while True:
     if arr:
         num = max(arr)
     else:
-        print(1)
         break
     for i in range(len(arr)):
         if arr[i] == num:
             if i == 0:
+                print(1)
                 arr = []
                 break
             else:
