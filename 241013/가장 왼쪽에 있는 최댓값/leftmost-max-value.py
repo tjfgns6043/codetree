@@ -2,7 +2,20 @@ n = int(input())
 
 arr = list(map(int, input().split()))
 
-num = max(arr)
-for i in range(n):
-    if arr[i] == num:
-        print(i, end=' ')
+while True:
+    if len(arr) == 1: 
+        break
+    if arr:
+        num = max(arr)
+    else:
+        print(1)
+        break
+    for i in range(len(arr)):
+        if arr[i] == num:
+            if i == 0:
+                arr = []
+                break
+            else:
+                print(i+1, end=' ')
+                arr = arr[:i]
+                break
