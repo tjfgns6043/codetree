@@ -2,18 +2,16 @@ n = int(input())
 
 arr = list(map(int, input().split()))
 
-max_value = 0
-ok = False
-stack = []
+max_value = []
+
+dp = [0 for _ in range(1001)]
+
 for i in range(len(arr)):
-    if i == len(arr) and max_value == 0:
-        ok = False
-    if arr[i] not in stack and arr[i] > max_value:
-        max_value = arr[i]
-        stack.append(arr[i])
-        ok = True
-        
-if ok:
-    print(max_value)
-else:
-    print(-1)
+    dp[arr[i]] += 1
+
+for i in range(1,1001):
+    if i == 1000 and dp[i] != 1:
+        print(-1)
+    if dp[i] == 1:
+        print(i)
+        break
