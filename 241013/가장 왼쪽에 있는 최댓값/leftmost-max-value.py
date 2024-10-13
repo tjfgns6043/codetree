@@ -3,8 +3,6 @@ n = int(input())
 arr = list(map(int, input().split()))
 
 while True:
-    if len(arr) == 1: 
-        break
     if arr:
         num = max(arr)
     else:
