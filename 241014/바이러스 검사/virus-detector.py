@@ -17,8 +17,4 @@ for people in peoples:
                 cnt += 1
         else:
             cnt += (people // checks[1])
-            if people % checks[1] == 0:
-                continue
-            else:
-                cnt += 1
 print(cnt)
