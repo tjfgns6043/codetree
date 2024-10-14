@@ -12,5 +12,5 @@ for people in peoples:
         if people // checks[1] == 0:
             cnt += 1
         else:
-            cnt += (people // checks[0]) + 1
+            cnt += (people // checks[1]) + 1
 print(cnt)
