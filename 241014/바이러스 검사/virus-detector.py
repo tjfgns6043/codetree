@@ -5,7 +5,7 @@ checks = list(map(int, input().split()))
 cnt = 0
 for people in peoples:
     if people <= checks[0]:
-        cnt = 1
+        cnt += 1
     else:
         cnt += 1
         people -= checks[0]
