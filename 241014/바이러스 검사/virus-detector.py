@@ -9,7 +9,7 @@ for people in peoples:
     else:
         cnt += 1
         people -= checks[0]
-        if people // checks[1] == 0:
+        if people // checks[1] <= 1:
             cnt += 1
         else:
             cnt += (people // checks[1]) + 1
