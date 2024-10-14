@@ -9,12 +9,8 @@ for people in peoples:
     else:
         cnt += 1
         people -= checks[0]
-        if people // checks[1] <= 1:
+        cnt += people // checks[1]
+        people = people % checks[1]
+        if people > 0:
             cnt += 1
-            if people % checks[1] == 0:
-                continue
-            else:
-                cnt += 1
-        else:
-            cnt += (people // checks[1])
 print(cnt)
