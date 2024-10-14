@@ -31,24 +31,24 @@ for i in range(m):
                     special[nx][ny] = 2
                 else:
                     if nx >= 0 and ny > n: # 오른쪽으로 벗어났을때
-                        ny = ny%n
+                        ny = ny%min(n, 10)
                     elif nx > n and ny >= 0: # 아래쪽으로 벗어났을때
-                        nx = nx%n
+                        nx = nx%min(n, 10)
                     elif nx >= 0 and ny < 0 : # 왼쪽으로 벗어났을때
                         ny = ny+min(n, 10)
                     elif nx < 0 and ny >= 0: # 위쪽으로 벗어났을떄
                         nx = nx+min(n, 10)
                     elif nx < 0 and ny > n: # 우측위 벗어났을떄
                         nx = nx+min(n, 10)
-                        ny = ny%n
+                        ny = ny%min(n, 10)
                     elif nx < 0 and ny < 0: # 좌측위 벗어났을떄
                         nx = nx+min(n, 10)
                         ny = ny+min(n, 10)
                     elif nx > n and ny > n: # 우측아래 벗어났을떄
-                        nx = nx%n
-                        ny = ny%n
+                        nx = nx%min(n, 10)
+                        ny = ny%min(n, 10)
                     elif nx > n and ny < 0: # 좌측아래 벗어났을떄
-                        nx = nx%n
+                        nx = nx%min(n, 10)
                         ny = ny+min(n, 10)
                     special[nx][ny] = 2
                     
