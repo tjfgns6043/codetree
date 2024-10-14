@@ -50,7 +50,10 @@ for i in range(m):
                     elif nx > n and ny < 0: # 좌측아래 벗어났을떄
                         nx = nx%n
                         ny = ny+n
-                    special[nx][ny] = 2
+                    try:
+                        special[nx][ny] = 2
+                    except:
+                        print(nx,ny)
     
     # step2 해당 땅에 특수 영양제를 투입하고. 투입 후 투입된 특수 영양제는 사라집니다
     # step3 투입한 리브로수의 대각선으로 인접한 방향에 높이가 1이상인 리브로수가 있는 만큼 높이가 더 성장
