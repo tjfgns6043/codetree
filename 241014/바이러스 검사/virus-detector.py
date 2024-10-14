@@ -11,6 +11,10 @@ for people in peoples:
         people -= checks[0]
         if people // checks[1] <= 1:
             cnt += 1
+            if people % checks[1] == 0:
+                continue
+            else:
+                cnt += 1
         else:
             cnt += (people // checks[1])
             if people % checks[1] == 0:
